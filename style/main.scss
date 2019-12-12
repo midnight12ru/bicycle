@@ -1,0 +1,132 @@
+.menu {
+    margin-top: 35px;
+
+    .logo {
+        background: url("./../res/icon/logo.png") no-repeat center;
+        width: 94px;
+        height: 85px;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    &__item {
+        list-style: none;
+
+        &:not(:last-child) {
+            margin-right: 39px;
+        }
+
+        &:not(:first-child) {
+            margin-left: 39px;
+        }
+    }
+
+    .link {
+        font-size: 13px;
+        font-family: "lato-bold", sans-serif;
+        color: rgb(77, 73, 89);
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-decoration: none;
+    }
+}
+
+.about {
+    text-align: center;
+    background-color: rgb(247, 247, 247);
+}
+
+.works {
+    display: grid;
+    grid-template-columns: repeat(3, 33.3333%);
+    grid-template-rows: repeat(3, 37.5vw); // minmax(150px, 1fr)
+    grid-template-areas: 'big-img-1 big-img-1 card-1'
+        'card-2 big-img-2 big-img-2'
+        'card-3 card-4 card-5';
+
+    .big-img-1 {
+        grid-area: big-img-1;
+    }
+
+    .big-img-2 {
+        grid-area: big-img-2;
+    }
+
+    @for $var from 1 to 5 {
+        .card-#{$var} {
+            grid-area: card-#{$var};
+        }
+    }
+}
+
+.shop {
+    &__grid {
+        grid-template-columns: repeat(6, 16.666666666666668%);
+        grid-template-rows: repeat(2, 16.6875vw); // minmax(150px, 1fr)
+        grid-template-areas:
+            'sc-1 sc-2 mcv-1 mcv-2 mch-1 mch-1'
+            'mch-2 mch-2 mcv-1 mcv-2 mch-3 mch-3'
+        ;
+
+
+        .sc-1{
+            grid-area: sc-1;
+        } 
+        .sc-2{
+            grid-area: sc-2;
+        } 
+        .mcv-1{
+            grid-area: mcv-1;
+        } 
+        .mcv-2{
+            grid-area: mcv-2;
+        } 
+        .mch-1{
+            grid-area: mch-1;
+        } 
+        .mch-2{
+            grid-area: mch-2;
+        }
+        .mch-3{
+            grid-area: mch-3;
+        }
+    }
+}
+
+.dflex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.common {
+    text-align: center;
+
+    &__img {
+        width: 52px;
+        height: 43px;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-family: "lato-bold", sans-serif;
+        color: rgb(53, 55, 56);
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.2;
+    }
+
+    &__desc {
+        font-size: 18px;
+        font-family: "lato", sans-serif;
+        color: rgb(132, 135, 137);
+        line-height: 1.889;
+    }
+
+
+}
