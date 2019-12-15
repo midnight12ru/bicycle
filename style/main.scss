@@ -74,25 +74,31 @@
         ;
 
 
-        .sc-1{
+        .sc-1 {
             grid-area: sc-1;
-        } 
-        .sc-2{
+        }
+
+        .sc-2 {
             grid-area: sc-2;
-        } 
-        .mcv-1{
+        }
+
+        .mcv-1 {
             grid-area: mcv-1;
-        } 
-        .mcv-2{
+        }
+
+        .mcv-2 {
             grid-area: mcv-2;
-        } 
-        .mch-1{
+        }
+
+        .mch-1 {
             grid-area: mch-1;
-        } 
-        .mch-2{
+        }
+
+        .mch-2 {
             grid-area: mch-2;
         }
-        .mch-3{
+
+        .mch-3 {
             grid-area: mch-3;
         }
     }
@@ -102,6 +108,64 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.footer {
+    text-align: center;
+    .form {
+        display: flex;
+        max-width: 534px;
+        width: 100%;
+        margin: 0 auto;
+
+        &__btn {
+            font-size: 24px;
+            font-family: "Lato", sans-serif;
+            color: rgb(255, 255, 255);
+            line-height: 1;
+            text-align: center;
+            background-color: rgb(100, 194, 158);
+            width: 126px;
+            height: 69px;
+            text-transform: uppercase;
+            border: none;
+            margin-left: 8px;
+        }
+
+        &__mail {
+            height: 69px;
+            box-sizing: border-box;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(211, 215, 217);
+            background-color: rgb(255, 255, 255);
+            width: 404px;
+            text-indent: 27px;
+            font-size: 20px;
+            font-family: "Lato";
+            color: rgba(146, 146, 146, 0.502);
+            font-style: italic;
+            line-height: 1.2;
+            text-align: center;
+        }
+    }
+
+    &__info{
+        .wrapper{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    address{
+        span{
+            display: block;
+            text-align: left;
+        }
+    }
+    .soc{
+        display: flex;
+    }
 }
 
 .common {
