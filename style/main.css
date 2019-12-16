@@ -1,5 +1,12 @@
+.header {
+  height: 100vw;
+  max-height: 800px;
+  background: url(./../res/img/header-bg.png) no-repeat center;
+  background-size: cover;
+}
+
 .menu {
-  margin-top: 35px;
+  padding-top: 35px;
 }
 
 .menu .logo {
@@ -9,20 +16,28 @@
 }
 
 .menu__list {
-  margin: 0;
+  margin: 0 0 0 -10px;
   padding: 0;
 }
 
 .menu__item {
   list-style: none;
-}
-
-.menu__item:not(:last-child) {
-  margin-right: 39px;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .menu__item:not(:first-child) {
-  margin-left: 39px;
+  margin-left: 23px;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 11px;
+}
+
+.menu .logo {
+  -webkit-transform: none;
+          transform: none;
+  margin: 0 41px 0 51px;
 }
 
 .menu .link {
@@ -33,11 +48,30 @@
   text-transform: uppercase;
   line-height: 1.2;
   text-decoration: none;
+  letter-spacing: 2px;
 }
 
-.about {
+.about,
+.twitter {
   text-align: center;
   background-color: #f7f7f7;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: 469px;
+  height: 100vw;
+}
+
+.about__desc,
+.twitter__desc {
+  width: 68%;
+  letter-spacing: -.19px;
+}
+
+.about__logo,
+.twitter__logo {
+  margin-top: -16px;
 }
 
 .works {
@@ -64,6 +98,25 @@
   grid-area: big-img-2;
 }
 
+.works .card {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.works .card .wrapper {
+  margin: 70px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+.works .card .wrapper .desc {
+  text-align: justify;
+}
+
 .works .card-1 {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
@@ -86,6 +139,20 @@
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: card-4;
+}
+
+.works .img-b {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.works .img-s {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  max-height: 200px;
 }
 
 .shop__grid {
@@ -236,7 +303,8 @@
   color: #353738;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.2;
+  letter-spacing: 3.2px;
+  margin: 30px 0;
 }
 
 .common__desc {
@@ -244,5 +312,6 @@
   font-family: "lato", sans-serif;
   color: #848789;
   line-height: 1.889;
+  margin: -8px -33px 0 0;
 }
 /*# sourceMappingURL=main.css.map */

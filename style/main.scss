@@ -1,5 +1,12 @@
+.header {
+    height: 100vw;
+    max-height: 800px;
+    background: url(./../res/img/header-bg.png) no-repeat center;
+    background-size: cover;
+}
+
 .menu {
-    margin-top: 35px;
+    padding-top: 35px;
 
     .logo {
         background: url("./../res/icon/logo.png") no-repeat center;
@@ -8,21 +15,27 @@
     }
 
     &__list {
-        margin: 0;
+        margin: 0 0 0 -10px;
         padding: 0;
 
     }
 
     &__item {
         list-style: none;
-
-        &:not(:last-child) {
-            margin-right: 39px;
-        }
+        transform: translateY(-5px);
 
         &:not(:first-child) {
-            margin-left: 39px;
+            margin-left: 23px;
         }
+
+        &:not(:last-child) {
+            margin-right: 11px;
+        }
+    }
+
+    .logo {
+        transform: none;
+        margin: 0 41px 0 51px;
     }
 
     .link {
@@ -33,12 +46,26 @@
         text-transform: uppercase;
         line-height: 1.2;
         text-decoration: none;
+        letter-spacing: 2px;
     }
 }
 
-.about {
+.about,
+.twitter {
     text-align: center;
     background-color: rgb(247, 247, 247);
+    flex-direction: column;
+    max-height: 469px;
+    height: 100vw;
+
+    &__desc {
+        width: 68%;
+        letter-spacing: -.19px;
+    }
+
+    &__logo {
+        margin-top: -16px;
+    }
 }
 
 .works {
@@ -57,10 +84,37 @@
         grid-area: big-img-2;
     }
 
+    .card{
+        flex-direction: column;
+        .wrapper{
+            margin: 70px;
+            flex: 1;
+            text-align: center;
+
+            .desc{
+                text-align: justify;
+            }
+        }
+    }
+
     @for $var from 1 to 5 {
         .card-#{$var} {
             grid-area: card-#{$var};
         }
+    }
+
+    .img-b {
+        position: relative;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-s {
+        position: relative;
+        z-index: -1;
+        width: 100%;
+        max-height: 200px;
     }
 }
 
@@ -112,6 +166,7 @@
 
 .footer {
     text-align: center;
+
     .form {
         display: flex;
         max-width: 534px;
@@ -150,20 +205,21 @@
         }
     }
 
-    &__info{
-        .wrapper{
+    &__info {
+        .wrapper {
             display: flex;
             flex-direction: row;
         }
     }
 
-    address{
-        span{
+    address {
+        span {
             display: block;
             text-align: left;
         }
     }
-    .soc{
+
+    .soc {
         display: flex;
     }
 }
@@ -182,7 +238,8 @@
         color: rgb(53, 55, 56);
         font-weight: bold;
         text-transform: uppercase;
-        line-height: 1.2;
+        letter-spacing: 3.2px;
+        margin: 30px 0;
     }
 
     &__desc {
@@ -190,7 +247,6 @@
         font-family: "lato", sans-serif;
         color: rgb(132, 135, 137);
         line-height: 1.889;
+        margin: -8px -33px 0 0;
     }
-
-
 }
