@@ -299,6 +299,7 @@
 
 .footer__info {
   background: #f7f7f7;
+  padding: 100px 0;
 }
 
 .footer__info .wrapper {
@@ -309,6 +310,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__col {
+  max-width: 534px;
+  width: 100%;
 }
 
 .footer address span {
