@@ -84,14 +84,15 @@
         grid-area: big-img-2;
     }
 
-    .card{
+    .card {
         flex-direction: column;
-        .wrapper{
+
+        .wrapper {
             margin: 70px;
             flex: 1;
             text-align: center;
 
-            .desc{
+            .desc {
                 text-align: justify;
             }
         }
@@ -119,12 +120,21 @@
 }
 
 .shop {
+    &__item {
+        overflow: hidden;
+
+        img {
+            height: 100%;
+        }
+    }
+
     &__grid {
+        display: grid;
         grid-template-columns: repeat(6, 16.666666666666668%);
         grid-template-rows: repeat(2, 16.6875vw); // minmax(150px, 1fr)
         grid-template-areas:
             'sc-1 sc-2 mcv-1 mcv-2 mch-1 mch-1'
-            'mch-2 mch-2 mcv-1 mcv-2 mch-3 mch-3'
+            'mch-2 mch-2 mcv-1 mcv-2 mch-3 mch-4'
         ;
 
 
@@ -155,6 +165,29 @@
         .mch-3 {
             grid-area: mch-3;
         }
+    }
+
+    &__more {
+        background: #282f35;
+        padding: 75px 0;
+        text-align: center;
+    }
+
+    &__btn {
+        width: 300px;
+        height: 50px;
+        box-sizing: border-box;
+
+        cursor: pointer;
+
+        font-size: 14px;
+        font-family: "Lato", sans-serif;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-transform: uppercase;
+
+        border: 1px solid #fff;
+        background: transparent;
     }
 }
 
@@ -206,6 +239,7 @@
     }
 
     &__info {
+        background: #f7f7f7;
         .wrapper {
             display: flex;
             flex-direction: row;
